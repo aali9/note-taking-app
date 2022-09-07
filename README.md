@@ -58,5 +58,4 @@ https://github.com/aali9/note-taking-app
 
 #demo 
 
-![alt text](images/Picture1.png)
 ![alt text](images/Picture2.png)

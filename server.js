@@ -1,26 +1,19 @@
-// required modules
-const express = require("express");
+const express = require('express');
+const apiRoutes = require('./routes/apiRoutes.js');
+const htmlRoutes = require('./routes/htmlRoutes.js');
 
-const apiRoutes = require("./routes/apiRoutes.js");
-const htmlRoutes = require("./routes/htmlRoutes.js");
 
-// express server create at server port 3000
+const PORT = process.env.PORT || 3001;
+
 const app = express();
-const PORT = process.env.PORT || 3007;
 
-// parse date from string or array
-app.use(express.urlencoded({ extended: true }));
-// parse json data
 app.use(express.json());
-// use public folder
-app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
-// routes
-app.use("/api", apiRoutes);
-app.use("/", htmlRoutes);
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-
-// event listener
-app.listen(PORT, () => {
-  console.log(`Now listening on PORT: ${PORT}`);
-});
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+);

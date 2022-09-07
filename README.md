@@ -54,7 +54,7 @@ Enter `node server.js` in terminal to start the application. Once a port has bee
 ## Deployed Application
 https://morning-thicket-57382.herokuapp.com/notes
 
-https://github.com/aali9/Note-Taker-Express.js
+https://github.com/aali9/note-taking-app
 
 #demo 
 
